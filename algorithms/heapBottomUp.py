@@ -26,14 +26,16 @@ def heapify(arr):
                     heap = True
                 else:
                     arr[k], arr[j] = arr[j], arr[k]
+                    print('swapped ', arr[j] , ' with ', arr[k])
                     k = j
             arr[k] = v
 
 
 def main():
-    someList = [randint(0,100) for x in range(randint(3,9))]
+    # range(x,y): x is minimum number of nodes, y max number of nodes
+    someList = [randint(0,100) for x in range(randint(3,10))]
     # insert a dummy value in index 0,
-    # by doing this the parent nodes get adressed starting from 1 (root).
+    # by doing this the parent nodes get adressed starting from index 1 (root).
     someList = [0] + someList
 
     # print list starting from index 1 -> don't show dummy at index 0
